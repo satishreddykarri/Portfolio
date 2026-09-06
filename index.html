@@ -54,13 +54,15 @@ main{position:relative}.hero{min-height:100svh;max-width:var(--max);margin:auto;
 <section class="section"><div class="section-head reveal"><div class="num">05 — PROOF</div><h2 class="section-title">Proof of<br>practice.</h2></div><div class="ach-grid reveal"><div class="ach"><strong>400+</strong><p>LeetCode problems solved across easy, medium, and hard problems.</p></div><div class="ach"><strong>7TH</strong><p>Ranked 7th in a competitive Machine Learning hackathon alongside senior students.</p></div><div class="ach"><strong>TABLEAU</strong><p>Received faculty appreciation for a Tableau dashboard that was showcased as an example of effective data visualization.</p></div></div></section>
 <section class="section contact" id="contact"><div class="reveal"><div class="eyebrow">06 — CONTACT</div><h2 class="contact-title">LET'S<br><span>BUILD.</span></h2></div><div class="contact-row reveal"><a class="email" href="mailto:satishreddykarri121@gmail.com">satishreddykarri121@gmail.com</a><div class="socials"><a href="https://satishreddykarri.github.io/Portfolio/" target="_blank">PORTFOLIO ↗</a><a href="https://github.com/satishreddykarri" target="_blank">GITHUB ↗</a><a href="https://www.linkedin.com/in/karri-sai-krishna-naga-satish-reddy-5ab5b1264/" target="_blank">LINKEDIN ↗</a><a href="resume.pdf" target="_blank">RESUME ↗</a></div></div></section>
 </main><footer class="footer"><span>© 2026 Satish Reddy</span><span>Designed & built from scratch.</span></footer>
-<!-- Global visitor counter via Counter API. Counts page loads across all visitors/devices. -->
+<!-- Global visitor counter. Every page load/refresh increments the same shared counter. -->
 <script>
 (function(){
   const visitorCount = document.getElementById('visitor-count');
   if (!visitorCount) return;
 
-  const endpoint = 'https://counterapi.com/api/satishreddykarri.github.io/view/portfolio';
+  // Abacus is a simple public counter API. /hit increments atomically and
+  // returns the new value, so refreshes are counted instead of deduplicated.
+  const endpoint = 'https://abacus.jasoncameron.dev/hit/satishreddy-portfolio/page-views';
 
   fetch(endpoint, { cache: 'no-store' })
     .then(function(response){
@@ -70,6 +72,8 @@ main{position:relative}.hero{min-height:100svh;max-width:var(--max);margin:auto;
     .then(function(data){
       if (typeof data.value === 'number') {
         visitorCount.textContent = data.value.toLocaleString();
+      } else if (typeof data.value === 'string' && !isNaN(Number(data.value))) {
+        visitorCount.textContent = Number(data.value).toLocaleString();
       }
     })
     .catch(function(){

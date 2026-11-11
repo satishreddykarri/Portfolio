@@ -31,6 +31,54 @@ main{position:relative}.hero{min-height:88svh;max-width:var(--max);margin:auto;p
 @media(max-width:900px){.nav{display:none}.nav-visitors{font-size:10px}.hero{grid-template-columns:1fr;padding-top:125px}.profile-stage{height:390px;order:-1}.profile-frame{width:250px}.hero h1{font-size:18vw}.hero-bottom{display:block}.availability{margin-top:25px}.section{padding:85px 20px}.section-head{grid-template-columns:60px 1fr;margin-bottom:45px}.project{grid-template-columns:45px 1fr;min-height:0}.visual{grid-column:2;height:380px;order:3}.project:nth-of-type(n) .visual{transform:none}.pinfo{grid-column:2}.projects-more-wrap{display:flex;justify-content:center;padding:22px 0 12px;border-top:1px solid var(--line)}.projects-more{appearance:none;background:transparent;color:var(--paper);border:1px solid #3a3d36;padding:14px 18px;cursor:pointer;font:11px "DM Mono";letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:18px;transition:.3s}.projects-more span:nth-child(2){display:none}.projects-more b{color:var(--acid);font-size:16px;font-weight:400}.projects-more:hover{border-color:var(--acid);color:var(--acid);transform:translateY(-2px)}.projects-more[aria-expanded="true"] span:first-child{display:none}.projects-more[aria-expanded="true"] span:nth-child(2){display:inline}.projects-more[aria-expanded="true"] b{transform:rotate(45deg)}.secondary-projects{display:none}.secondary-projects.open{display:block}.secondary-projects .project:last-child{border-bottom:1px solid var(--line)}.projects-less-wrap{display:none}
 .about-grid{grid-template-columns:1fr;gap:50px}.stack{grid-template-columns:1fr 1fr}.exp{grid-template-columns:80px 1fr}.exp ul{grid-column:2}.ach-grid{grid-template-columns:1fr}.contact-row{display:block}.contact-wrap{grid-template-columns:1fr;gap:40px}.frow{grid-template-columns:1fr}.socials{margin-top:25px}.cursor{display:none}}
 @media(max-width:520px){.top{padding:0 16px}.hero{padding-left:16px;padding-right:16px}.section{padding-left:16px;padding-right:16px}.stack{grid-template-columns:1fr}.project{grid-template-columns:35px 1fr}.visual{height:300px}.pinfo h3{font-size:38px}.footer{padding:18px 16px;display:block}.footer span{display:block;margin-bottom:8px}}
+  
+/* Digno Solutions - Career Progression Timeline */
+
+.career-path {
+    position: relative;
+}
+
+.career-path::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 42px;
+    bottom: 42px;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        var(--acid),
+        rgba(215,255,69,.18)
+    );
+}
+
+.career-path .career-step {
+    position: relative;
+}
+
+.career-path .career-step::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 39px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--acid);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 14px rgba(215,255,69,.55);
+    z-index: 2;
+}
+
+.career-path .career-step .exp-date {
+    padding-left: 25px;
+}
+
+.career-path .career-step:last-child::before {
+    background: var(--blue);
+    box-shadow: 0 0 14px rgba(103,169,255,.5);
+}
+
 </style>
 </head>
 <body>
@@ -56,7 +104,89 @@ main{position:relative}.hero{min-height:88svh;max-width:var(--max);margin:auto;p
 <article class="project reveal"><div class="pnum">05</div><div class="pinfo"><h3>Blood Donation System</h3><div class="type">Node.js / Express / MongoDB / HTML / JavaScript</div><p class="pdesc">A web-based blood donation platform designed to make donor discovery more accessible. The application supports user registration and authentication, donor profiles, blood-group information, and search functionality so users can find potential donors based on their requirements. I built the backend with Node.js and Express, used MongoDB for persistent data, and connected the server-side workflows to a straightforward HTML and JavaScript interface.</p><div class="pmeta"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Donor search</span></div><div class="links"><a href="https://blooddonation-m40d.onrender.com/" target="_blank" rel="noopener">LIVE DEMO ↗</a></div></div><div class="visual"><div class="vlabel"><b>DONOR /</b> MATCH ENGINE</div><div class="scan"></div><svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#130f10"/><circle cx="450" cy="275" r="125" fill="none" stroke="#ff7048" stroke-width="3"/><path d="M450 175V375M350 275H550" stroke="#ff7048" stroke-width="22" stroke-linecap="round"/><g fill="#d7ff45"><circle cx="180" cy="145" r="9"/><circle cx="720" cy="150" r="9"/><circle cx="170" cy="430" r="9"/><circle cx="730" cy="425" r="9"/></g><g stroke="#67a9ff" stroke-width="2"><path d="M180 145L380 235M720 150L520 235M170 430L380 315M730 425L520 315"/></g><text x="365" y="470" fill="#777" font-family="monospace" font-size="14">BLOOD GROUP → DONOR → MATCH</text></svg><div class="corner">REGISTER → SEARCH → CONNECT</div></div></article>
 <article class="project reveal"><div class="pnum">06</div><div class="pinfo"><h3>Human Resource Dashboard</h3><div class="type">Tableau / SQL / EDA / Data Analytics</div><p class="pdesc">An interactive Human Resource analytics dashboard created to turn workforce data into a set of visual views that are easier to explore and interpret. I worked with SQL and exploratory data analysis before presenting the results in Tableau, organizing workforce metrics into an accessible dashboard rather than leaving the information in raw tables. The dashboard was also recognized with faculty appreciation for its data-visualization presentation.</p><div class="pmeta"><span class="tag">Tableau</span><span class="tag">SQL</span><span class="tag">EDA</span></div><div class="links"><a href="https://public.tableau.com/app/profile/karri.sai.krishna.naga.satish.reddy/viz/FinalHumanResourceDashboard/HRSummary" target="_blank" rel="noopener">TABLEAU ↗</a></div></div><div class="visual"><div class="vlabel"><b>HR /</b> ANALYTICS VIEW</div><div class="scan"></div><svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#101215"/><g stroke="#30343b" fill="none"><rect x="80" y="90" width="740" height="420" rx="8"/><path d="M80 160H820M80 410H820"/><path d="M330 160V510M580 160V510"/></g><g fill="#67a9ff"><rect x="125" y="350" width="95" height="45"/><rect x="370" y="290" width="95" height="105"/><rect x="620" y="225" width="95" height="170"/></g><g fill="#d7ff45"><circle cx="170" cy="225" r="10"/><circle cx="420" cy="205" r="10"/><circle cx="670" cy="185" r="10"/></g><path d="M125 350L220 300L315 330L410 250L505 285L600 220L715 180" fill="none" stroke="#ff7048" stroke-width="3"/><text x="115" y="475" fill="#777" font-family="monospace" font-size="14">PEOPLE → METRICS → INSIGHT</text></svg><div class="corner">DATA → VISUALIZE → UNDERSTAND</div></div></article>
 <article class="project reveal"><div class="pnum">07</div><div class="pinfo"><h3>Agentic Tree Data Structure Visualizer</h3><div class="type">AI Agents / LLM Workflows / Data Structures</div><p class="pdesc">An AI-powered visualizer that makes tree data structures easier to create, modify, inspect, and understand interactively. The project combines core tree operations with AI agents and LLM-powered workflows that can provide contextual insights, automated reasoning, and step-by-step explanations of what is happening inside the structure. Its modular architecture separates the data-structure logic from the agentic layer, creating a foundation for interactive learning as well as intelligent assistance.</p><div class="pmeta"><span class="tag">AI Agents</span><span class="tag">LLM Workflows</span><span class="tag">Tree Structures</span></div><div class="links"><a href="https://github.com/satishreddykarri/Agentic-Tree-DataStructure-Visualizer" target="_blank" rel="noopener">GITHUB ↗</a></div></div><div class="visual"><div class="vlabel"><b>AGENT /</b> TREE REASONING</div><div class="scan"></div><svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect width="900" height="600" fill="#101311"/><g stroke="#30372f" stroke-width="3"><path d="M450 170L250 290M450 170L650 290M250 290L150 420M250 290L350 420M650 290L550 420M650 290L750 420"/></g><g fill="#d7ff45"><circle cx="450" cy="170" r="25"/><circle cx="250" cy="290" r="20"/><circle cx="650" cy="290" r="20"/></g><g fill="#67a9ff"><circle cx="150" cy="420" r="17"/><circle cx="350" cy="420" r="17"/><circle cx="550" cy="420" r="17"/><circle cx="750" cy="420" r="17"/></g><circle cx="450" cy="170" r="52" fill="none" stroke="#ff7048" stroke-width="2" stroke-dasharray="5 8"/><text x="405" y="115" fill="#ff7048" font-family="monospace" font-size="13">LLM AGENT</text><text x="125" y="510" fill="#777" font-family="monospace" font-size="14">CREATE → REASON → EXPLAIN → MODIFY</text></svg><div class="corner">STRUCTURE → CONTEXT → REASONING</div></div></article><div class="projects-more-wrap projects-less-wrap"><button class="projects-more projects-less" id="projects-less" type="button"><span>READ LESS — HIDE PROJECTS</span><b>−</b></button></div></div></section>
-<section class="section" id="experience"><div class="section-head reveal"><div class="num">03 — EXPERIENCE</div><h2 class="section-title">Engineering<br>experience.</h2></div><div class="exp reveal"><div class="exp-date">JULY 2026<br>— PRESENT</div><div><h3>Associate Developer</h3><div class="exp-company">DIGNO SOLUTIONS</div></div><ul><li>Developed and maintained backend services and REST APIs using Go (Golang), implementing business logic and scalable API workflows.</li><li>Built, tested, and debugged APIs using Postman, while performing database queries, validation, and data analysis using SQL and DBeaver.</li><li>Investigated and resolved backend issues, collaborated with the development team on feature enhancements, and followed Git-based development and API testing practices.</li></ul></div><div class="exp reveal"><div class="exp-date">APR — JUN<br>2025</div><div><h3>Flutter Developer Intern</h3><div class="exp-company">DATAVALLEY WEB SERVICES</div></div><ul><li>Developed and enhanced 2+ real-time cross-platform mobile applications using Flutter.</li><li>Worked across UI/UX, state management, API integration, performance optimization, and Git-based development.</li><li>Implemented GitHub Actions CI/CD pipelines for build, testing, and deployment workflows.</li></ul></div><div class="exp reveal"><div class="exp-date">MAY — JUN<br>2024</div><div><h3>Full Stack Web Developer Intern</h3><div class="exp-company">EDUMOON</div></div><ul><li>Developed and deployed responsive web applications using the MERN stack: React, Node.js, Express, and MongoDB.</li><li>Designed and integrated RESTful APIs while optimizing application performance.</li><li>Contributed to real-world projects as part of a hands-on full-stack internship.</li></ul></div></section>
+
+<section class="section" id="experience">
+  <div class="section-head reveal">
+    <div class="num">03 — EXPERIENCE</div>
+    <h2 class="section-title">Engineering<br>experience.</h2>
+  </div>
+
+  <!-- Digno Solutions - Career Progression -->
+  <div class="career-path reveal">
+
+    <div class="exp career-step">
+      <div class="exp-date">AUG 2026<br>— PRESENT</div>
+
+      <div>
+        <h3>Backend Developer</h3>
+        <div class="exp-company">
+          DIGNO SOLUTIONS · PROMOTED
+        </div>
+      </div>
+
+      <ul>
+        <li>Developing and maintaining backend services and REST APIs using Go (Golang), implementing business logic and scalable API workflows.</li>
+        <li>Working with SQL databases for data retrieval, validation, query optimization, and backend data management.</li>
+        <li>Building, testing, and debugging APIs using Postman, while investigating and resolving backend issues.</li>
+        <li>Working on backend integrations, feature enhancements, and maintaining reliable application workflows through Git-based development.</li>
+      </ul>
+    </div>
+
+    <div class="exp career-step">
+      <div class="exp-date">JUNE 2026<br>— JULY 2026</div>
+
+      <div>
+        <h3>Associate Developer</h3>
+        <div class="exp-company">
+          DIGNO SOLUTIONS · INITIAL ROLE
+        </div>
+      </div>
+
+      <ul>
+        <li>Started professional software development work, gaining hands-on experience with backend development and application workflows.</li>
+        <li>Worked with Go (Golang), REST APIs, SQL, and Postman as part of the development process.</li>
+        <li>Contributed to debugging, API testing, database operations, and feature development while collaborating with the development team.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Datavalley Internship -->
+  <div class="exp reveal">
+    <div class="exp-date">APR — JUN<br>2025</div>
+
+    <div>
+      <h3>Flutter Developer Intern</h3>
+      <div class="exp-company">
+        DATAVALLEY WEB SERVICES
+      </div>
+    </div>
+
+    <ul>
+      <li>Developed and enhanced 2+ real-time cross-platform mobile applications using Flutter.</li>
+      <li>Worked across UI/UX, state management, API integration, performance optimization, and Git-based development.</li>
+      <li>Implemented GitHub Actions CI/CD pipelines for build, testing, and deployment workflows.</li>
+    </ul>
+  </div>
+
+  <!-- Edumoon Internship -->
+  <div class="exp reveal">
+    <div class="exp-date">MAY — JUN<br>2024</div>
+
+    <div>
+      <h3>Full Stack Web Developer Intern</h3>
+      <div class="exp-company">
+        EDUMOON
+      </div>
+    </div>
+
+    <ul>
+      <li>Developed and deployed responsive web applications using the MERN stack: React, Node.js, Express, and MongoDB.</li>
+      <li>Designed and integrated RESTful APIs while optimizing application performance.</li>
+      <li>Contributed to real-world projects as part of a hands-on full-stack internship.</li>
+    </ul>
+  </div>
+</section>
 <section class="section"><div class="section-head reveal"><div class="num">04 — TOOLBOX</div><h2 class="section-title">Technical<br>toolbox.</h2></div><div class="stack reveal"><div><small>PROGRAMMING</small><p>Python · Java · JavaScript · SQL · Go · Dart</p></div><div><small>AI / ML</small><p>Machine Learning · Computer Vision · YOLOv8 · OpenCV · Scikit-learn · NumPy · Pandas</p></div><div><small>BACKEND / FULL STACK</small><p>React · Node.js · Express.js · REST APIs · Go</p></div><div><small>DATA / DATABASES</small><p>SQL · MongoDB · Tableau</p></div><div><small>TOOLS</small><p>Git · GitHub · Postman · GitHub Actions · Firebase</p></div><div><small>MOBILE</small><p>Flutter · Dart · Supabase · Android</p></div><div><small>ADDITIONAL</small><p>N8N · Splunk · Cybersecurity · DSA</p></div></div></section>
 <section class="section"><div class="section-head reveal"><div class="num">05 — PROOF</div><h2 class="section-title">Proof of<br>practice.</h2></div><div class="ach-grid reveal"><div class="ach"><strong>400+</strong><p>LeetCode problems solved across easy, medium, and hard problems.</p></div><div class="ach"><strong>7TH</strong><p>Ranked 7th in a competitive Machine Learning hackathon alongside senior students.</p></div><div class="ach"><strong>TABLEAU</strong><p>Received faculty appreciation for a Tableau dashboard that was showcased as an example of effective data visualization.</p></div></div></section>
 <section class="section contact" id="contact"><div class="reveal"><div class="eyebrow">06 — CONTACT</div><h2 class="contact-title">LET'S<br><span>TALK.</span></h2></div><div class="contact-wrap reveal"><div class="contact-copy"><p>Have a role, project, or technical problem worth discussing? Send me a message.</p><div class="contact-links"><a href="mailto:satishreddykarri121@gmail.com">satishreddykarri121@gmail.com ↗</a><a href="https://github.com/satishreddykarri" target="_blank" rel="noopener">GITHUB ↗</a><a href="https://www.linkedin.com/in/karri-sai-krishna-naga-satish-reddy-5ab5b1264/" target="_blank" rel="noopener">LINKEDIN ↗</a><a href="resume.pdf" target="_blank">RESUME ↗</a></div></div><div class="contact-form"><form id="cForm"><input type="hidden" name="access_key" value="56926a2b-1c29-4a86-af6b-822672223b51"><input type="hidden" name="from_name" value="Satish Reddy Portfolio"><input type="checkbox" name="botcheck" style="display:none"><div class="frow"><div class="fg"><label for="fname">FULL NAME</label><input type="text" id="fname" name="name" placeholder="Your name" required></div><div class="fg"><label for="femail">EMAIL</label><input type="email" id="femail" name="email" placeholder="you@example.com" required></div></div><div class="fg"><label for="fsubject">SUBJECT</label><input type="text" id="fsubject" name="subject" placeholder="Job opportunity / collaboration" required></div><div class="fg"><label for="fmsg">MESSAGE</label><textarea id="fmsg" name="message" placeholder="Write your message..." required></textarea></div><button type="submit" class="fbtn" id="sendBtn">SEND MESSAGE ↗</button><div class="fsuccess" id="fsuccess">✓ Message sent. I'll get back to you soon.</div><div class="ferror" id="ferror">Something went wrong. Please try again.</div></form></div></div></section>
